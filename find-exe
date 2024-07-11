@@ -1,0 +1,7 @@
+import psutil
+
+def list_all_processes():
+    for proc in psutil.process_iter(['pid', 'name']):
+        print(f"Process ID: {proc.info['pid']} - Process Name: {proc.info['name']}")
+
+list_all_processes()
