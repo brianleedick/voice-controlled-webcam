@@ -67,7 +67,7 @@ def click_camera_button():
 
 def is_webcam_app_running():
     for proc in psutil.process_iter(['pid', 'name']):
-      if proc.info['name'].lower() == 'windowscamera.exe':  # REPLACE with name for Windows Camera app (this is what it is on my computer)
+      if proc.info['name'].lower() == 'windowscamera.exe':  # REPLACE with name for Windows Camera app (this is what it is on my computer, but you can find yours using find-exe file and looking for the file that socunds like a camera name)
             return True
     return False
 
