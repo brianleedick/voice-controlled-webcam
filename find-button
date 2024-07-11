@@ -1,0 +1,15 @@
+import pyautogui
+import pygetwindow as gw
+import time
+
+print("Move your mouse to the camera button and wait for 5 seconds...")
+time.sleep(5)
+windows = gw.getWindowsWithTitle('Camera')
+if windows:
+    window = windows[0]
+    x, y = pyautogui.position()
+    relative_x = x - window.left
+    relative_y = y - window.top
+    print(f"Relative position: ({relative_x}, {relative_y})")
+else:
+    print("Camera window not found.")
